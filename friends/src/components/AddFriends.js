@@ -21,7 +21,8 @@ const handleAddFriends = e => {
     axiosWithAuth()
     .post('/friends', newFriend)
     .then(res => {
-        props.setFriends(...props.friends, newFriend)
+        console.log(res)
+        props.setFriends(res.data)
     })
     
     setNewFriend({name:"", age:"", email:" "})

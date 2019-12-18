@@ -13,11 +13,11 @@ const [friends, setFriends] = useState([]);
         .get('/friends')
         .then(res => {
             setFriends(res.data)
+            
         })
         .catch(err => console.log(err))
     },[]);
         
-
     console.log(friends)
     return (
         <div>
